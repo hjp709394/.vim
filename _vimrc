@@ -929,3 +929,5 @@ augroup Binary
     au BufWritePost *.bin set nomod | endif
 augroup END
 
+"################################################################################"
+map <F4> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
