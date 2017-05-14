@@ -569,7 +569,7 @@ function! Do_CsTag()
     endif
 endfunction
 
-map <leader>tl :Tlist<CR>
+map <f11> :Tlist<CR>
 map <leader>tu :call Do_CsTag()<CR>
 let Tlist_Ctags_Cmd='ctags-exuberant'
 let Tlist_Use_Right_Window=0 " with value 0, the window would show ont the left
@@ -930,4 +930,4 @@ augroup Binary
 augroup END
 
 "################################################################################"
-map <F11> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+map <F10> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
