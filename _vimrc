@@ -571,7 +571,13 @@ endfunction
 
 map <f11> :Tlist<CR>
 map <leader>tu :call Do_CsTag()<CR>
+
+if(executable('ctags-exuberant'))
 let Tlist_Ctags_Cmd='ctags-exuberant'
+elseif(executable('ctags'))
+let Tlist_Ctags_Cmd='ctags'
+endif
+
 let Tlist_Use_Right_Window=0 " with value 0, the window would show ont the left
 let Tlist_Show_One_File=0 " make taglist shows the function list of several files.
 " with value 1, taglist will only show one file's
