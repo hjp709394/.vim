@@ -936,4 +936,4 @@ augroup Binary
 augroup END
 
 "################################################################################"
-map <F10> :execute " grep -srnw --binary-files=without-match --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
+map <F10> :execute " grep -srnw --binary-files=without-match --exclude=\*~ --exclude-dir=.git . -e " . expand("<cword>") . " " <bar> cwindow<CR>
