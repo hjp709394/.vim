@@ -557,9 +557,9 @@ function! Do_CsTag()
     endif
     if(executable('cscope') && has("cscope") )
         if(g:vimrc_iswindows!=1)
-             execute "!find `pwd` -name '*.cc' -o -name '*.h' -o -name '*.hpp' -o -name '*.c' -o -name '*.cpp' -o -name '*.java' -o -name '*.cs' -o -name '*.java' > cscope.files"
+             execute "!find `pwd` -name '*.cc' -o -name '*.h' -o -name '*.hpp' -o -name '*.c' -o -name '*.cpp' -o -name '*.java' -o -name '*.cs' -o -name '*.py' > cscope.files"
         else
-             execute "!dir /s/b *.cc,*.c,*.cpp,*.h,*.java,*.cs,*.java >> cscope.files"
+             execute "!dir /s/b *.cc,*.c,*.cpp,*.h,*.java,*.cs,*.py >> cscope.files"
         endif
         silent execute "!cscope -b"
         execute "normal :"
