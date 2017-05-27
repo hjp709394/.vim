@@ -7,4 +7,4 @@
     #| sort -f >> filenametags
 
 echo -e "!_TAG_FILE_SORTED\t2\t/2=foldcase/" > "$2"
-find $1 -type f -not -path '*/.git/*' -not -name '*~' -not -name '*.swp' -not -name '*.swo' -printf "%f\t%p\t1\n" | sort -f >> "$2"
+find $1 -type f -not -path '*/.git/*' -not -name '*.obj' -not -name '*.exe' -not -name '*.dll' -not -name '*.lib' -not -name '*.so' -not -name '*~' -not -name '*.swp' -not -name '*.swo' -printf "%f\t%p\t1\n" | sort -f >> "$2"
