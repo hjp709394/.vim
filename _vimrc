@@ -21,6 +21,7 @@ Plugin 'vim-scripts/xptemplate'
 Plugin 'a.vim'
 Plugin 'vim-scripts/The-NERD-Commenter'
 Plugin 'vim-utils/vim-man'
+Plugin 'jiangmiao/auto-pairs'
 "Plugin 'Valloric/YouCompleteMe'
 "Plugin 'scrooloose/syntastic'
 Plugin 'Shougo/neocomplete.vim'
@@ -792,6 +793,9 @@ augroup END
 au Filetype ruby,eruby,yaml let g:rubycomplete_buffer_loading = 1
 au Filetype ruby,eruby,yaml let g:rubycomplete_classes_in_global = 1
 au Filetype ruby,eruby,yaml let g:rubycomplete_rails = 1
+
+"""""""""""""""""""""Auto pair"""""""""""""""""""""""""
+let g:AutoPairsFlyMode = 1
 
 """""""""""""""""""" vjde setting """"""""""""""""""""
 "let g:vjde_java_command='java'
