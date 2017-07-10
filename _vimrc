@@ -571,7 +571,9 @@ function! Do_CsTag()
 endfunction
 
 " connect cscope at start up
-silent execute "cs add cscope.out"
+if filereadable("cscope.out")
+    silent execute "cs add cscope.out"
+endif
 
 map <f11> :Tlist<CR>
 map <leader>tu :call Do_CsTag()<CR>
